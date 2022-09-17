@@ -1,19 +1,18 @@
-# Periapt code interview
+# Senior Engineer Interview
 
 ## Background
 Welcome to Periapt! We're excited to meet you!
 The goal for this coding exercise is for us to see your basic coding skills:
-- Understanding requirements
-- Implementing code that works
-- Code maintainability
-- Separation of architectural layers
+- Understanding requirements.
+- Implementing code that works.
+- Code maintainability and testability.
+- Separation of architectural layers.
+- End-to-end full-stack development.
 
 Also, it's a starting point for technical discussions. Things like:
 - Why did you choose library X?
 - How would you implement Y?
 - What would you do if you had more time?
-
-The most important thing is to finish **in time** with **working code**. Maintainability and cleanliness come afterwards.
 
 The exercise instructions are deliberately partially detailed. For example, we don't always define what is considered a Bad Request. When information is missing, use your common sense and make your best guess. You may also treat your interviewer as your product manager and consult with them.
 
@@ -24,8 +23,12 @@ Good luck!
 ## General instructions
 You will create a REST server that returns information from the Wikipedia website.
 
-Your server must run locally on port 3000. Our tests expect such a server to be up and running.
-**Please provide instructions for how to run your server from your source code** (e.g `npm install && tsc && PORT=3000 node dist`).
+Your server must be **publicly available**. You may choose any cloud provider you like (Heroku, AWS, Azure, GCP/Firebase, everything works).
+
+**Please provide detailed instuctions regarding:**
+1. How to use your API.
+2. How to run your server from your source code (e.g `npm install && tsc && PORT=3000 node dist`).
+3. How to publish changes to the public API.
 
 This exercise consists of parts. Make sure you're completely done with each part before moving on to the next. As a tip, you're advised to make a different commit/branch for every part to make sure you have a stable, working version for each part.
 
@@ -72,14 +75,16 @@ The token should be a random, hard to guess string.
 Add support for authentication with a token to the `GET` endpoint:
 The server should look at the `x-authentication` header. If the header exists, the server should take the header's value and check if it's a valid token. If so, it should make the `GET` request using the user's favorite language.
 
-### Bonus - Part D
-You may choose between any of the following bonus parts:
+#### C.3
+Implement a caching mechanism. If a requested article was already fetched in the past 5 minutes, return the same result.
 
-#### Bonus 1
+### Part D
+
 Implement very simple web UI that allows signing up new users and fetching article introductions as those users.
 It should have 2 parts:
 1. A signup form with a username and language fields
 2. A "Fetch article introduction" form that has a mandatory "article name" field, and optional "token", "language" fields.
 
-#### Bonus 2
-Implement a caching mechanism. If a requested article was already fetched in the past 5 minutes, return the same result.
+### Part E - Bonus
+Implement CI/CD workflows. You may choose any CI/CD provider/framework you like. 
+Make sure to properly document your workflow. 
