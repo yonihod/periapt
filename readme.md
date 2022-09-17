@@ -28,7 +28,7 @@ Your server must be **publicly available**. You may choose any cloud provider yo
 **Please provide detailed instuctions regarding:**
 1. How to use your API.
 2. How to run your server from your source code (e.g `npm install && tsc && PORT=3000 node dist`).
-3. How to publish changes to the public API.
+3. How to publish changes.
 
 This exercise consists of parts. Make sure you're completely done with each part before moving on to the next. As a tip, you're advised to make a different commit/branch for every part to make sure you have a stable, working version for each part.
 
