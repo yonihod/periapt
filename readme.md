@@ -25,6 +25,8 @@ You will create a REST server that returns information from the Wikipedia websit
 
 Your server must be **publicly available**. You may choose any cloud provider you like (Heroku, AWS, Azure, GCP/Firebase, everything works).
 
+Submit this exercise by forking this repository and opening a Pull Request containing your implementation.
+
 **Please provide detailed instuctions regarding:**
 1. How to use your API.
 2. How to run your server from your source code (e.g `npm install && tsc && PORT=3000 node dist`).
