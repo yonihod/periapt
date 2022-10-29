@@ -28,11 +28,11 @@ jobs:
         env:
           CI: false
       
-      - name: clean up server
-        run: rm -r src
-
       - name: copy client files to build
         run: cp src/client/ dist/src/client
+        
+      - name: clean up server
+        run: rm -r src
 
       - name: Generate deployment package
         run: zip -r deploy.zip . -x "**node_modules**" -x "*.git*"
