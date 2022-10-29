@@ -11,6 +11,7 @@
     "strictNullChecks":true,
     "sourceMap": true,
     "types": ["node"],
+    "jsx": "react"
   },
   "exclude": ["src/client"]
 }
