@@ -19,6 +19,9 @@ jobs:
 
       - name: build client
         run: npm run build-client
+
+      - name: clean up client
+        run: cd src/client && rm -r src && rm -r node_modules
         
       - name: clean up client files
         run: rm -r client/node_modules && rm -r client/src
@@ -30,6 +33,9 @@ jobs:
       
       - name: clean up server
         run: rm -r src
+
+      - name: copy client files to build
+        run: cp src/client/ dist/src/client
 
       - name: Generate deployment package
         run: zip -r deploy.zip . -x "**node_modules**" -x "*.git*"

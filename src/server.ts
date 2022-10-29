@@ -8,7 +8,7 @@ import { NODE_ENV } from "./types/config";
 import articleRouter from "./routes/introduction";
 import userRouter from "./routes/user";
 import auth from "./middleware/auth";
-import root from "./routes/root";
+import path from "path";
 
 const app:Application  = express();
 
@@ -19,7 +19,7 @@ app.use( cors({origin: config.clientOrigins[nodeEnv]}));
 app.use(express.json());
 
 //set up static file
-app.use(express.static('client/build'));
+app.use(express.static(path.resolve(__dirname, 'client/build')));
 
 // Apply most middleware first
 app.use(express.urlencoded({ extended: true }));
@@ -29,7 +29,10 @@ app.use(helmet());
 
 app.use('/introduction', auth, articleRouter);
 app.use('/user', userRouter);
-app.use('/', root); 
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client/build', 'index.html'));
+});
+
 
 // Apply error handling
 app.use(_404);
