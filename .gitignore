@@ -5,6 +5,6 @@ package-lock.json
 notes
 .jshintrc
 .idea
-dist/*
+dist
 .vscode
 *.map
