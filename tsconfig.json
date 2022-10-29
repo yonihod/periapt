@@ -14,5 +14,5 @@
     "types": ["node"],
     "jsx": "react"
   },
-  "exclude": ["node_modules", "**/*.spec.ts", "src/client"]
+  "exclude": ["node_modules", "**/*.spec.ts", "src/client/*"]
 }

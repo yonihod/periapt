@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-const BASE_URL = process.env.REACT_APP_SERVER_URL;
-
 const ArticleForm = ({ setArticle }: any) => {
 
     const [language, setLanguage] = useState('');
@@ -31,7 +29,7 @@ const ArticleForm = ({ setArticle }: any) => {
         // remove all spaces from articleName
         const articleNameWithoutSpaces = articleName.replace(/\s/g, '_');
 
-        const result = await fetch(`${BASE_URL}/introduction/${articleNameWithoutSpaces}`, {
+        const result = await fetch(`/introduction/${articleNameWithoutSpaces}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

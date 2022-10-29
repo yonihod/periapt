@@ -1,7 +1,5 @@
 import React,{ useState } from "react";
 
-const BASE_URL = process.env.REACT_APP_SERVER_URL;
-
 const Signup = ({isSignedUp} : any) => {
     const [userName, setUsername] = useState('');
     const [language, setLanguage] = useState('');
@@ -21,7 +19,7 @@ const Signup = ({isSignedUp} : any) => {
         if (!userName || !language) {
             return;
         }
-        const result = await fetch(`${BASE_URL}/user`, {
+        const result = await fetch('/user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
