@@ -4,11 +4,11 @@ import helmet from "helmet";
 import config from "./config/config";
 import errorHandler from "./middleware/errorHandler";
 import _404 from "./middleware/404";
-import root from "./routes/root";
 import { NODE_ENV } from "./types/config";
 import articleRouter from "./routes/introduction";
 import userRouter from "./routes/user";
 import auth from "./middleware/auth";
+import root from "./routes/root";
 
 const app:Application  = express();
 
@@ -17,6 +17,9 @@ const nodeEnv: NODE_ENV = config.nodeEnv as NODE_ENV;
 app.use( cors({origin: config.clientOrigins[nodeEnv]}));
 
 app.use(express.json());
+
+//set up static file
+app.use(express.static('client/build'));
 
 // Apply most middleware first
 app.use(express.urlencoded({ extended: true }));

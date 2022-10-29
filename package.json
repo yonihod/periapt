@@ -6,6 +6,7 @@
   "main": "index.ts",
   "scripts": {
     "build": "tsc",
+    "build-client": "cd client && npm run build",
     "start": "node dist/src/index.js",
     "dev": "ts-node-dev --watch .env, src src/index.ts",
     "test": "cross-env NODE_ENV=test jest",

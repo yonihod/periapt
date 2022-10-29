@@ -10,6 +10,7 @@
     "resolveJsonModule": true,
     "strictNullChecks":true,
     "sourceMap": true,
-    "types": ["node"]
-  }
+    "types": ["node"],
+  },
+  "exclude": ["src/client"]
 }
