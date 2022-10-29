@@ -28,6 +28,9 @@ jobs:
       - name: clean up typescript files
         run: rm -r src
 
+      - name: clean up client
+        run: cd client && rm -r src && rm -r node_modules  && rm *
+
       - name: Generate deployment package
         run: zip -r deploy.zip . -x "**node_modules**" -x "*.git*"
 
