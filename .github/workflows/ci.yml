@@ -29,7 +29,7 @@ jobs:
           CI: false
       
       - name: copy client files to build
-        run: cp src/client/ dist/src/client
+        run: cp -r src/client dist/src/client
         
       - name: clean up server
         run: rm -r src
