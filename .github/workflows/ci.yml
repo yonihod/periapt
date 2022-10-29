@@ -22,9 +22,6 @@ jobs:
 
       - name: clean up client
         run: cd src/client && rm -r src && rm -r node_modules
-        
-      - name: clean up client files
-        run: rm -r client/node_modules && rm -r client/src
 
       - name: build server
         run: npm run build
