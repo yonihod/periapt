@@ -20,7 +20,7 @@ jobs:
       - name: build client
         run: npm run build-client
         
-      - name: clean up client
+      - name: clean up client files
         run: cd client && rm -r !(build)
 
       - name: build server
